@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event</title>
+  </head>
+  <body>
+    <button>클릭</button>
+    <button>클릭</button>
+
+    <script>
+      document.querySelectorAll("button").forEach((button) => {
+        button.addEventListener("click", function (event) {
+          changeColor(event);
+        });
+      });
+
+      function changeColor(event) {
+        const color = prompt("색을 입력하세요.");
+        document.body.style.backgroundColor = color;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+/* @import url(reset.css); */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 1080px;
+  margin: 0px auto;
+  background-color: aliceblue;
+}
+
+header,
+section.main,
+footer {
+  margin: 0px auto;
+  background-color: rgb(255, 246, 235);
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+header {
+  height: 90px;
+  width: 1080px;
+  margin-top: 10px;
+}
+
+header ul {
+  float: right;
+  margin-top: 20px;
+}
+
+header ul li {
+  display: inline-block;
+  width: 130px;
+  background-color: #c9d6f7;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 1px 2px 7px 1px gray;
+  margin-right: 10px;
+}
+
+section.main {
+  text-align: center;
+  position: relative;
+}
+
+section.main > * {
+  margin-bottom: 20px;
+}
+
+section.main h2 {
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+footer ul {
+  text-align: center;
+  color: rgb(86, 89, 255);
+}

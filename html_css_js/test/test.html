@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="header">
+      <h2>To Do List</h2>
+    </section>
+    <div id="myToDo" class="action">
+      <input
+        type="text"
+        id="myInput"
+        onkeydown="enterkey()"
+        placeholder="할 일을 적어주세요."
+      />
+      <span class="addBtn" onclick="newElement()">추가</span>
+    </div>
+    <ul id="myList"></ul>
+    <script>
+      // 초기 데이터
+      let basicDatas = [
+        { id: 1, title: "Todo 1", done: false },
+        { id: 2, title: "Todo 2", done: true },
+      ];
+
+      // 목록 클릭하면 취소선 긋기
+      const list = document.querySelector("ul");
+      list.addEventListener("click", toggleChecked, false);
+
+      function toggleChecked(e) {
+        if (e.target.tagName === "LI") {
+          e.target.classList.toggle("checked");
+        }
+      }
+
+      // 초기 할 일 목록 생성 함수
+      function initializeTodoList() {
+        const ul = document.getElementById("myList");
+        basicDatas.forEach((todo) => {
+          const li = document.createElement("li");
+          li.textContent = todo.title;
+          if (todo.done) {
+            li.classList.add("checked");
+          }
+          const span = document.createElement("span");
+          span.textContent = "\u00D7";
+          span.className = "close";
+          li.appendChild(span);
+          ul.appendChild(li);
+        });
+
+        // 닫기 버튼에 대한 이벤트 리스너
+        let close = document.getElementsByClassName("close");
+        for (let i = 0; i < close.length; i++) {
+          close[i].onclick = function () {
+            let div = this.parentElement;
+            div.style.display = "none";
+          };
+        }
+      }
+
+      // 페이지 로드시 초기 할 일 목록 생성
+      window.onload = initializeTodoList;
+
+      // 새로운 할 일 항목 추가
+      function newElement() {
+        const li = document.createElement("li");
+        const inputValue = document.getElementById("myInput").value;
+        const text = document.createTextNode(inputValue);
+        li.appendChild(text);
+        if (inputValue === "") {
+          alert("할 일을 입력하세요.");
+        } else {
+          document.getElementById("myList").appendChild(li);
+        }
+        document.getElementById("myInput").value = "";
+
+        // 새로운 내용이 추가된 후 닫기 버튼 추가
+        const span = document.createElement("span");
+        const txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        li.appendChild(span);
+
+        // 닫기 버튼에 대한 이벤트 리스너 추가
+        span.onclick = function () {
+          let div = this.parentElement;
+          div.style.display = "none";
+        };
+      }
+
+      // 엔터 키 이벤트 처리
+      function enterkey() {
+        if (event.keyCode == 13) {
+          newElement();
+        }
+      }
+    </script>
+  </body>
+</html>
