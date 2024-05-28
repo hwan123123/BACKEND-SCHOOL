@@ -10,17 +10,25 @@ public class UserMain {
     public static void main(String[] args) {
         UserDAO userDAO = new UserDAO();
         // findUser()
-        log.info("==========findUser()==========");
-        User finduser = userDAO.findUser(1L);
-        log.info("Found user : {}", finduser.getName());
+//        log.info("==========findUser()==========");
+//        User finduser = userDAO.findUser(1L);
+//        log.info("Found user : {}", finduser.getName());
+//
+//        User findUser2 = userDAO.findUser(1L);
+//
+//        if (finduser == findUser2) {
+//            log.info("findUser == findUser2");
+//        } else {
+//            log.info("findUser != findUser2");
+//        }
 
-        User findUser2 = userDAO.findUser(1L);
+        User user = new User();
+        user.setId(2L);
+//        user.setName("hwan");
+//        user.setEmail("hwan@gmail.com");
 
-        if (finduser == findUser2) {
-            log.info("findUser == findUser2");
-        } else {
-            log.info("findUser != findUser2");
-        }
+        userDAO.deleteUser(user);
+//        userDAO.updateUser(user);
 //
 //        User hwanUser = new User("minji","minji@exam.com");
 //
