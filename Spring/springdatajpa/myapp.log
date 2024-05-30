@@ -1,0 +1,60 @@
+2024-05-30 11:10:57 [main] INFO  o.e.s.SpringdatajpaApplication - Starting SpringdatajpaApplication using Java 21.0.2 with PID 28656 (C:\Users\admin\Desktop\TECHIT HWAN\BACKEND SCHOOL\Spring\springdatajpa\out\production\classes started by admin in C:\Users\admin\Desktop\TECHIT HWAN\BACKEND SCHOOL\Spring\springdatajpa)
+2024-05-30 11:10:57 [main] INFO  o.e.s.SpringdatajpaApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-30 11:10:57 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-30 11:10:57 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interface.
+2024-05-30 11:10:57 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-30 11:10:57 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-05-30 11:10:57 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-05-30 11:10:57 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-30 11:10:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-30 11:10:58 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c5e69a5
+2024-05-30 11:10:58 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-30 11:10:58 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-30 11:10:58 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-30 11:10:58 [main] INFO  o.e.s.SpringdatajpaApplication - Started SpringdatajpaApplication in 1.79 seconds (process running for 2.187)
+2024-05-30 11:10:58 [main] INFO  o.e.s.SpringdatajpaApplication - 사용자 추가 : hwan
+2024-05-30 11:10:58 [main] INFO  o.e.s.SpringdatajpaApplication - 사용자 아이디 : 9
+2024-05-30 11:10:58 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-30 11:10:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-30 11:10:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-30 11:28:39 [main] INFO  o.e.s.SpringdatajpaApplication - Starting SpringdatajpaApplication using Java 21.0.2 with PID 31248 (C:\Users\admin\Desktop\TECHIT HWAN\BACKEND SCHOOL\Spring\springdatajpa\out\production\classes started by admin in C:\Users\admin\Desktop\TECHIT HWAN\BACKEND SCHOOL\Spring\springdatajpa)
+2024-05-30 11:28:39 [main] INFO  o.e.s.SpringdatajpaApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-30 11:28:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-30 11:28:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
+2024-05-30 11:28:39 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-30 11:28:40 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-05-30 11:28:40 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-05-30 11:28:40 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-30 11:28:40 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-30 11:28:40 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5dcf0772
+2024-05-30 11:28:40 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-30 11:28:40 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-30 11:28:40 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-30 11:28:41 [main] INFO  o.e.s.SpringdatajpaApplication - Started SpringdatajpaApplication in 1.817 seconds (process running for 2.215)
+2024-05-30 11:28:41 [main] INFO  o.e.s.SpringdatajpaApplication - 사용자 추가 : hong
+2024-05-30 11:28:41 [main] INFO  o.e.s.SpringdatajpaApplication - 사용자 아이디 : 10
+2024-05-30 11:28:41 [main] INFO  o.e.s.SpringdatajpaApplication - 사용자 삭제 : hong
+2024-05-30 11:28:41 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-30 11:28:41 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-30 11:28:41 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-30 11:29:40 [main] INFO  o.e.s.SpringdatajpaApplication - Starting SpringdatajpaApplication using Java 21.0.2 with PID 29668 (C:\Users\admin\Desktop\TECHIT HWAN\BACKEND SCHOOL\Spring\springdatajpa\out\production\classes started by admin in C:\Users\admin\Desktop\TECHIT HWAN\BACKEND SCHOOL\Spring\springdatajpa)
+2024-05-30 11:29:40 [main] INFO  o.e.s.SpringdatajpaApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-30 11:29:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-30 11:29:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interface.
+2024-05-30 11:29:40 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-30 11:29:40 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-05-30 11:29:40 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-05-30 11:29:41 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-30 11:29:41 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-30 11:29:41 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33de7f3d
+2024-05-30 11:29:41 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-30 11:29:41 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-30 11:29:41 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-30 11:29:42 [main] INFO  o.e.s.SpringdatajpaApplication - Started SpringdatajpaApplication in 1.818 seconds (process running for 2.213)
+2024-05-30 11:29:42 [main] INFO  o.e.s.SpringdatajpaApplication - hwan::hwan@example.com
+2024-05-30 11:29:42 [main] INFO  o.e.s.SpringdatajpaApplication - hwan::hwan@example.com
+2024-05-30 11:29:42 [main] INFO  o.e.s.SpringdatajpaApplication - hwan::hwan@example.com
+2024-05-30 11:29:42 [main] INFO  o.e.s.SpringdatajpaApplication - hwan::hwan@example.com
+2024-05-30 11:29:42 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-30 11:29:42 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-30 11:29:42 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
