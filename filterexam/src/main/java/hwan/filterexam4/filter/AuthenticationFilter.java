@@ -1,18 +1,28 @@
 package hwan.filterexam4.filter;
 
 import hwan.filterexam4.entity.User;
+import hwan.filterexam4.service.UserService;
 import jakarta.servlet.*;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
 public class AuthenticationFilter implements Filter {
+    private UserService userService;
+
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
+
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         try {
+            HttpServletResponse response = (HttpServletResponse) servletResponse;
             HttpServletRequest request = (HttpServletRequest) servletRequest;
 
+            String path = request.getRequestURI(); // 요청주소 ex) /welcome, /loginform, /admin, /list
             String auth = null;
             Cookie[] cookies = request.getCookies();
             if (cookies != null) {
@@ -24,10 +34,36 @@ public class AuthenticationFilter implements Filter {
                 }
             }
             if (auth != null) {
-                User user = new User();
-                user.setUsername(auth);
+                // 요청 url에 따라서 http://localhost:8080/admin -- Role이 ROLE_ADMIN인 사용자에게만 인가되도록
+                User user = userService.findByUsername(auth);
+                if (user != null) {
+                    user.setUsername(auth);
+                    UserContext.setUser(user);
+                    if((path.equals("/admin") && user
+                            .getRoles()
+                            .stream()
+                            .anyMatch(role -> role.getName().equals("ROLE_ADMIN")))
+                            ||
+                            (path.equals("/info") && user
+                                    .getRoles()
+                                    .stream()
+                                    .anyMatch(role -> role.getName().equals("ROLE_USER"))
+                            )
+                    ) {
+                        filterChain.doFilter(servletRequest, servletResponse);
+                        UserContext.clear();
+                        return;
+                    }
+                }
 
-                UserContext.setUser(user);
+                // 권한이 없는 사용자가 접근하려고 한다면
+                if (path.equals("/admin") || path.equals("/info")) {
+                    response.sendRedirect("/access-denied");
+                }
+//                User user = new User();
+//                user.setUsername(auth);
+//
+//                UserContext.setUser(user);
             }
             filterChain.doFilter(servletRequest, servletResponse);
         } finally {
