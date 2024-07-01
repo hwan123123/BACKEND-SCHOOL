@@ -1,6 +1,6 @@
-package hwan.zizonsecurity.repository;
+package hwan.jwtexam.repository;
 
-import hwan.zizonsecurity.domain.Role;
+import hwan.jwtexam.domain.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
