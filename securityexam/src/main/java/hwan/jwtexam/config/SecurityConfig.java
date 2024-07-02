@@ -1,5 +1,8 @@
 package hwan.jwtexam.config;
 
+import hwan.jwtexam.jwt.exception.CustomAuthenticationEntryPoint;
+import hwan.jwtexam.jwt.filter.JwtAuthenticationFilter;
+import hwan.jwtexam.jwt.util.JwtTokenizer;
 import hwan.jwtexam.security.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -10,6 +13,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -21,6 +25,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class SecurityConfig {
     private final CustomUserDetailsService customUserDetailsService;
+    private final JwtTokenizer jwtTokenizer;
+    private final CustomAuthenticationEntryPoint customAuthenticationEntryPoint;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -29,6 +35,7 @@ public class SecurityConfig {
                         .requestMatchers("/userregform","/userreg","/","/login").permitAll()
                         .anyRequest().authenticated()
                 )
+                .addFilterBefore(new JwtAuthenticationFilter(jwtTokenizer), UsernamePasswordAuthenticationFilter.class)
 //                .formLogin(Customizer.withDefaults())
                 .formLogin(form -> form.disable()
                 )
@@ -37,7 +44,9 @@ public class SecurityConfig {
                 )
                 .csrf(csrf -> csrf.disable())
                 .httpBasic(httpBasic -> httpBasic.disable())
-                .cors(cors -> cors.configurationSource(configurationSource()));
+                .cors(cors -> cors.configurationSource(configurationSource()))
+                .exceptionHandling(exception -> exception
+                        .authenticationEntryPoint(customAuthenticationEntryPoint));
         return http.build();
     }
 

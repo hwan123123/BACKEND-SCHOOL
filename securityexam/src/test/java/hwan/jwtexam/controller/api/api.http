@@ -5,3 +5,22 @@ Content-Type: application/json
   "username": "hwan",
   "password": "1234"
 }
+
+###
+GET http://localhost:8080/api/authtest
+Cookie: accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJod2FuQGV4YW0uY29tIiwidXNlcm5hbWUiOiJod2FuIiwibmFtZSI6IuydtOygle2ZmCIsInVzZXJJZCI6NSwicm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE3MTk4OTU5OTUsImV4cCI6MTcxOTg5Nzc5NX0.wLqlUDPp4stVlXoJiPz47XfYLNwEAHjT3vfs61jEsto
+
+###
+GET http://localhost:8080/api/authtest
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJod2FuQGV4YW0uY29tIiwidXNlcm5hbWUiOiJod2FuIiwibmFtZSI6IuydtOygle2ZmCIsInVzZXJJZCI6NSwicm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE3MTk4OTU5OTUsImV4cCI6MTcxOTg5Nzc5NX0.wLqlUDPp4stVlXoJiPz47XfYLNwEAHjT3vfs61jEsto
+
+###
+# @no-cookie-jar
+GET http://localhost:8080/api/authtest
+
+###
+POST http://localhost:8080/refreshToken
+Cookie: refreshToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJod2FuQGV4YW0uY29tIiwidXNlcm5hbWUiOiJod2FuIiwibmFtZSI6IuydtOygle2ZmCIsInVzZXJJZCI6NSwicm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE3MTk4OTcwNTUsImV4cCI6MTcyMDUwMTg1NX0.jI9zu7V3rjO-Su619d-ihc7ulE7MIGc_FWcQRVB26_I
+
+###
+GET http://localhost:8080/welcome

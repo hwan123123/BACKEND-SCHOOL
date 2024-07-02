@@ -18,19 +18,20 @@ public class JwtTokenizer {
     private final byte[] accessSecret;
     private final byte[] refreshSecret;
 
-    public static Long ACCESS_TOKEN_EXPIRE_COUNT = 30 * 60 * 1000L; // 30분
-
-    public static Long REFRESH_TOKEN_EXPIRE_COUNT = 7 * 24 * 60 * 60 * 1000L; // 7일
+    public static Long ACCESS_TOKEN_EXPIRE_COUNT = 30 * 60 * 1000L; //30분
+    public static Long REFRESH_TOKEN_EXPIRE_COUNT = 7 * 24 * 60 * 60 * 1000L; //7일
 
     public JwtTokenizer(@Value("${jwt.secretKey}") String accessSecret, @Value("${jwt.refreshKey}") String refreshSecret) {
         this.accessSecret = accessSecret.getBytes(StandardCharsets.UTF_8);
         this.refreshSecret = refreshSecret.getBytes(StandardCharsets.UTF_8);
     }
 
-    private String createToken(Long id, String email, String name, String username, List<String> roles, Long expire, byte[] secretKey) {
+    private String createToken(Long id, String email, String name, String username,
+                               List<String> roles, Long expire, byte[] secretKey) {
+
         Claims claims = Jwts.claims().setSubject(email);
 
-        // 필요한 정보들을 저장한다.
+        //필요한 정보들을 저장한다.
         claims.put("username", username);
         claims.put("name", name);
         claims.put("userId", id);
@@ -42,14 +43,15 @@ public class JwtTokenizer {
                 .setExpiration(new Date(new Date().getTime() + expire))
                 .signWith(getSigningKey(secretKey))
                 .compact();
+
     }
 
-    // ACCESS Token 생성
+    //ACCESS Token 생성
     public String createAccessToken(Long id, String email, String name, String username, List<String> roles) {
         return createToken(id, email, name, username, roles, ACCESS_TOKEN_EXPIRE_COUNT, accessSecret);
     }
 
-    // Refresh Token 생성
+    //Refresh Token생성
     public String createRefreshToken(Long id, String email, String name, String username, List<String> roles) {
         return createToken(id, email, name, username, roles, REFRESH_TOKEN_EXPIRE_COUNT, refreshSecret);
     }
