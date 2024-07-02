@@ -1,7 +1,7 @@
 package hwan.oauthexam.security;
 
 import hwan.oauthexam.domain.Role;
-import hwan.oauthexam.domain.SocialLogininfo;
+import hwan.oauthexam.domain.SocialLoginInfo;
 import hwan.oauthexam.domain.User;
 import hwan.oauthexam.service.SocialLoginInfoService;
 import hwan.oauthexam.service.UserService;
@@ -28,7 +28,9 @@ public class CustomOAuth2AuthenticationSuccessHandler implements AuthenticationS
     private final UserService userService;
 
     @Override
-    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authentication) throws IOException, ServletException {
+    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
+        // 요청 경로에서 provider 추출
+        // redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
         String requestUri = request.getRequestURI();
         String provider = extractProviderFromUri(requestUri);
         // provider가 없는 경로 요청이 왔다는것은 문제가 발생한것이다.
@@ -40,6 +42,8 @@ public class CustomOAuth2AuthenticationSuccessHandler implements AuthenticationS
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         DefaultOAuth2User defaultOAuth2User = (DefaultOAuth2User) auth.getPrincipal();
 
+        // attributes 에 소셜로그인한 정보가 들어가 있는데, 소셜로그인 방식에따라서 key가 달라질 수 있다.
+        // OAuth2 로그인 방식(provider)이 많아질때마다 조건문이 들어갈 수 있다.
         int socialId = (int)defaultOAuth2User.getAttributes().get("id");
         String name = (String)defaultOAuth2User.getAttributes().get("name");
 
@@ -60,15 +64,11 @@ public class CustomOAuth2AuthenticationSuccessHandler implements AuthenticationS
 
         }else { // 소셜로 아직 회원가입이 안되었을 때.
             // 소셜 로그인 정보 저장
-            SocialLogininfo socialLoginInfo = socialLoginInfoService.saveSocialLogininfo(provider, String.valueOf(socialId));
+            SocialLoginInfo socialLoginInfo = socialLoginInfoService.saveSocialLoginInfo(provider, String.valueOf(socialId));
             response.sendRedirect("/registerSocialUser?provider=" + provider + "&socialId=" + socialId + "&name=" + name + "&uuid=" + socialLoginInfo.getUuid());
         }
     }
 
-    @Override
-    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-
-    }
 
     private String extractProviderFromUri(String uri) {
         if(uri == null || uri.isBlank()) {

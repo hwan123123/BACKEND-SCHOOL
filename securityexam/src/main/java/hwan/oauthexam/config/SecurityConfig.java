@@ -1,7 +1,6 @@
 package hwan.oauthexam.config;
 
 import hwan.oauthexam.security.CustomOAuth2AuthenticationSuccessHandler;
-import hwan.oauthexam.security.CustomUserDetailsService;
 import hwan.oauthexam.service.SocialUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

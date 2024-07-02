@@ -11,7 +11,7 @@ import java.util.UUID;
 @Table(name = "social_login_info")
 @Getter
 @Setter
-public class SocialLogininfo {
+public class SocialLoginInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,7 +21,7 @@ public class SocialLogininfo {
     private LocalDateTime createdAt;
     private String uuid;
 
-    public SocialLogininfo() {
+    public SocialLoginInfo() {
         // 소셜 로그인한 시간, UUID
         // 소셜 로그인 이후에 특정한 시간까지만 추가 작업을 가능하게 하도록 하려고!!
         this.createdAt = LocalDateTime.now();

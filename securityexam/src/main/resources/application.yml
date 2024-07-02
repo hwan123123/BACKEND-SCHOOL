@@ -7,8 +7,8 @@ spring:
       client:
         registration:
           github:
-            client-id:
-            client-secret:
+            client-id: Iv23liYzy1Y8H5Dguitt
+            client-secret: 273a8a3c46a0bf99e56deef39ca57b024263d2b5
             scope:
               - email
               - profile

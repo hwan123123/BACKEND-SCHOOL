@@ -25,17 +25,17 @@ public class User {
     @Column(nullable = false, length = 50)
     private String name;
 
-    @Column(nullable = false, length = 100)
+    @Column(nullable = false,length = 100)
     private String email;
 
-    @Column(name = "registration_date", nullable = false, updatable = false)
+    @Column(name="registration_date", nullable = false, updatable = false)
     private LocalDateTime registrationDate = LocalDateTime.now();
 
-    // 테이블에 추가한 컬럼들 추가
+    //테이블에 추가한 컬럼들 엔티티에 추가
     @Column(name = "social_id")
     private String socialId;
-
     private String provider;
+
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(

@@ -1,16 +1,13 @@
 package hwan.oauthexam.controller;
 
-import hwan.oauthexam.domain.SocialLogininfo;
-import hwan.oauthexam.domain.User;
+import hwan.oauthexam.domain.SocialLoginInfo;
 import hwan.oauthexam.service.SocialLoginInfoService;
 import hwan.oauthexam.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -72,10 +69,10 @@ public class UserController {
     public String saveSocialUser(@RequestParam("provider")  String provider, @RequestParam("socialId")
     String socialId, @RequestParam("name")  String name, @RequestParam("username")  String username, @RequestParam("email")
                                  String email, @RequestParam("uuid")  String uuid, Model model) {
-        Optional<SocialLogininfo> socialLoginInfoOptional = socialLoginInfoService.findByProviderAndUuidAndSocialId(provider, uuid, socialId);
+        Optional<SocialLoginInfo> socialLoginInfoOptional = socialLoginInfoService.findByProviderAndUuidAndSocialId(provider, uuid, socialId);
 
         if (socialLoginInfoOptional.isPresent()) {
-            SocialLogininfo socialLoginInfo = socialLoginInfoOptional.get();
+            SocialLoginInfo socialLoginInfo = socialLoginInfoOptional.get();
             LocalDateTime now = LocalDateTime.now();
             Duration duration = Duration.between(socialLoginInfo.getCreatedAt(), now);
 

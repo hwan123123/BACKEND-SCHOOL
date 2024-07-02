@@ -1,6 +1,6 @@
 package hwan.oauthexam.service;
 
-import hwan.oauthexam.domain.SocialLogininfo;
+import hwan.oauthexam.domain.SocialLoginInfo;
 import hwan.oauthexam.repository.SocialLoginInfoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,8 +14,8 @@ public class SocialLoginInfoService {
     private final SocialLoginInfoRepository socialLoginRepository;
 
     @Transactional(readOnly = false)
-    public SocialLogininfo saveSocialLogininfo(String provider, String socialId) {
-        SocialLogininfo socialLogininfo = new SocialLogininfo();
+    public SocialLoginInfo saveSocialLoginInfo(String provider, String socialId) {
+        SocialLoginInfo socialLogininfo = new SocialLoginInfo();
         socialLogininfo.setProvider(provider);
         socialLogininfo.setSocialId(socialId);
 
@@ -23,7 +23,7 @@ public class SocialLoginInfoService {
     }
 
     @Transactional(readOnly = true)
-    public Optional<SocialLogininfo> findByProviderAndUuidAndSocialId(String provider, String uuid, String socialId) {
+    public Optional<SocialLoginInfo> findByProviderAndUuidAndSocialId(String provider, String uuid, String socialId) {
         return socialLoginRepository.findByProviderAndUuidAndSocialId(provider, uuid, socialId);
     }
 }
