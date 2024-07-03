@@ -26,7 +26,7 @@ public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint 
         if (isRestRequest(request)) {
             handleRestResponse(request, response, exception);
         } else {
-            handleRestResponse(request, response, exception);
+            handlePageResponse(request, response, exception);
         }
     }
 
