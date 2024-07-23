@@ -1,40 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fb2c477-5d74-40b0-8985-8d623ee5d8fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/baby_lion/.idea/baby_lion.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/ioexam.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day03/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day03/Animal01/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day03/Animal01/Eagle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day03/Animal01/Elephant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day03/Animal01/Lion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day03/Animal01/Zoo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day03/AnimalTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day03/Bicycle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day03/Bird.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day03/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day03/Cat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day03/Mammal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day03/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day03/StudentTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day03/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day03/VehicleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day03/학생.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day06/Exam/Exam01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day06/Exam/Exam02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day06/Exam/MultiTimer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day06/IOExam01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day06/IOExam02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day06/IOExam03.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day06/ThreadExam01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day06/ThreadExam02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baby_lion/javaExam/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/baby_lion/javaExam/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baby_lion/javaExam/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/baby_lion/javaExam/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day01/Exam01.java" beforeDir="false" afterPath="$PROJECT_DIR$/baby_lion/javaExam/src/main/java/com/exam/day01/Exam01.java" afterDir="false" />
-    </list>
+    <list default="true" id="1fb2c477-5d74-40b0-8985-8d623ee5d8fe" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,17 +19,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/admin/Desktop/TECHIT HWAN",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/Desktop/TECHIT HWAN&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -80,6 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710139002723</updated>
       <workItem from="1715586301610" duration="3000" />
+      <workItem from="1721742102841" duration="24000" />
     </task>
     <servers />
   </component>
